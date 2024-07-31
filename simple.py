@@ -21,7 +21,7 @@ class PrimeClock:
 
 class Clockwork:
     def __init__(self, max_iterations):
-        self.t = 1
+        self.t = 0
         self.clocks = []
         for prime in sympy.primerange(2, max_iterations):
             self.clocks.append(PrimeClock(prime))
@@ -34,8 +34,7 @@ class Clockwork:
     def run(self, max_iterations):
         for _ in range(max_iterations):
             digits, t = self.next()
-            print(f"{t-1}\t" + "\t".join(map(str, digits)))
-
+            print(f"{t}\t" + "\t".join(map(str, digits)))
 
 if __name__ == "__main__":
     max_iterations = 30
