@@ -48,4 +48,4 @@ class Clockwork:
 if __name__ == "__main__":
     max_iterations = 30
     clockwork = Clockwork()
-    clockwork.run(30)
+    clockwork.run(max_iterations)
